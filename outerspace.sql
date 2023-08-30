@@ -36,4 +36,26 @@ CREATE TABLE Planets (
 CREATE TABLE Moons (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL
+    TODO: REFERENCE Planets
 )
+
+-- CREATE TABLE Moon_Planets(
+--     planet_id REFERENCES Planets,
+--     moon_id REFERENCES Moons
+-- )
+
+INSERT INTO Stars
+(name, temp_in_K)
+VALUES ('The Sun', 5800),
+('Proxima Centauri', 3042),
+('Gliese 876', 3192);
+
+INSERT INTO Planets
+(name, orbital_period_in_years, star_id)
+VALUES ('Earth', 1.00, 1),
+('Mars', 1.882, 1),
+('Venus', 0.62, 1),
+('Proxima Centauri b', 0.03, 2),
+('Gliese 876 b', 0.236, 3);
+
+INSERT INTO Planets
