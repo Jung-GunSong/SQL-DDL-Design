@@ -1,0 +1,5 @@
+CREATE TABLE Stars (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    temp_in_K INT NOT NULL
+)
